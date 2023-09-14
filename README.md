@@ -203,6 +203,7 @@ The database design includes tables for user management, featuring fields like `
 - **Type Enum:** Enumerates user types, such as ADMIN, INTERNAL, and EXTERNAL.
 - **ArrayList:** Utilized for managing lists of `User` objects efficiently.
 
+
 ### Key Features
 
 - RESTful API endpoints for user management.
@@ -212,6 +213,18 @@ The database design includes tables for user management, featuring fields like `
 - Java-based backend and Maven for build management.
 
 The User Management project serves as a practical example of Spring Boot application development, demonstrating best practices in API design and user data management. It offers a solid foundation for building and extending user management systems in various applications.
+
+<!-- License -->
+## License
+This project is licensed under the [MIT License](LICENSE).
+
+<!-- Acknowledgments -->
+## Acknowledgments
+- Thank you to the Spring Boot and Java communities for providing excellent tools and resources.
+
+<!-- Contact -->
+## Contact
+For questions or feedback, please contact [Amit Ashok Swain](mailto:business.amitswain@gmail.com).
 
 
 
