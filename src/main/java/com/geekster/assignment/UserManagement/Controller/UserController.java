@@ -1,4 +1,5 @@
 package com.geekster.assignment.UserManagement.Controller;
+
 import com.geekster.assignment.UserManagement.Model.User;
 import com.geekster.assignment.UserManagement.Services.UserService;
 import jakarta.validation.Valid;
@@ -53,10 +54,11 @@ public class UserController {
         return userService.updateUserNumber(iD,num);
     }
 
-    @PutMapping("user/{iD}/address/{address}")
-    public String updateUserAddressById(@PathVariable Integer iD,@Email @PathVariable String email)
+    @PutMapping("user/{iD}/address/{updateUserEmail}")
+    public String updateUserAddressById(@PathVariable Integer iD,
+    @Email @PathVariable String updateUserEmail)
     {
-        return userService.updateUserEmailAddress(iD,email);
+        return userService.updateUserEmailAddress(iD,updateUserEmail);
     }
 
 
@@ -67,6 +69,5 @@ public class UserController {
     {
         return userService.deleteUser(iD);
     }
-
 
 }
