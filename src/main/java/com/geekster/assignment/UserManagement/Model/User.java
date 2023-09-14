@@ -1,5 +1,6 @@
 package com.geekster.assignment.UserManagement.Model;
 
+
 import jakarta.validation.constraints.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;

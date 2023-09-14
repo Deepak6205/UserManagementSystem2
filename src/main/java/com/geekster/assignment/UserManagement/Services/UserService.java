@@ -1,6 +1,5 @@
 package com.geekster.assignment.UserManagement.Services;
 
-
 import com.geekster.assignment.UserManagement.Model.User;
 import com.geekster.assignment.UserManagement.Repository.UserRepo;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,7 +25,7 @@ public class UserService {
 
     public String inputUser(User u) {
 
-        List<User> users = getAllUser();
+        List<User>users = getAllUser();
         users.add(u);
         return "User added";
     }
@@ -64,14 +63,14 @@ public class UserService {
         return "User with the "+iD+" Not found";
     }
 
-    public String updateUserEmailAddress(Integer iD, String email) {
+    public String updateUserEmailAddress(Integer iD, String updateUserEmail) {
         List<User> users = getAllUser();
 
         for(User i:users)
         {
             if(iD.equals(i.getUserId()))
             {
-                i.setUserEmail(email);
+                i.setUserEmail(updateUserEmail);
                 return "User's Address Updated. ";
             }
         }
