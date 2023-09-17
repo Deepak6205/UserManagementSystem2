@@ -10,7 +10,7 @@ ___
 <a href="Spring Boot url" >
     <img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-3.1.3-brightgreen.svg" />
 </a>
-    <img alt = "License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
+    <img alt = "GPL v3" src="https://img.shields.io/badge/License-GPLv3-blue.svg" />
     </a>
 </p>
 
