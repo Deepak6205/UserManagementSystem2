@@ -8,7 +8,7 @@ ___
     <img alt="Maven" src="https://img.shields.io/badge/maven-3.0.5-brightgreen.svg" />
 </a>
 <a href="Spring Boot url" >
-    <img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-3.0.6-brightgreen.svg" />
+    <img alt="Spring Boot" src="https://img.shields.io/badge/Spring Boot-3.1.3-brightgreen.svg" />
 </a>
     <img alt = "License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg" />
     </a>
