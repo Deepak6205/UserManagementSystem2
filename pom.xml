@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.geekster</groupId>
-	<artifactId>userManagement</artifactId>
+	<artifactId>User-Management</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>userManagement</name>
 	<description>User management to study Validation</description>
@@ -25,6 +25,13 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
+
+			<dependency>
+				<groupId>org.hibernate.validator</groupId>
+				<artifactId>hibernate-validator</artifactId>
+				<version>6.2.0.Final</version> <!-- Use the appropriate version -->
+			</dependency>
+
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>

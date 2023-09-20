@@ -22,27 +22,31 @@ public class User {
 
     private Type type;
 
-    @Email(message = "Enter valid Email")
+    @Pattern(regexp = "^\\d{4}-\\d{2}-\\d{2}$", message = "Date of birth must be in yyyy-mm-dd format")
+    private String dateOfBirth;
+
+    @Email(message = "Invalid email format. Please enter a valid Email!")
     private String userEmail;
 
     @Size(min = 12,max = 12)
-    @Pattern( regexp = "91[0-9]+",message = "Enter a Valid Phone Number")
+    @Pattern( regexp = "91[0-9]{10}$",message = "Enter a Valid Phone Number,Phone number must start with 91 and be followed by 10 digits")
     private  String userContactNo;
 
-    @Pattern( regexp = "^(0[1-9]|[12][0-9]|3[01])-(0[1-9]|1[0-2])-(\\d{4})$")
-    private String dob;
-
-
+    @NotNull(message = "Date cannot be null")
+    @Past(message = "Date must be in the past")
     private LocalDate date = LocalDate.now();
 
-
+    @NotNull(message = "Time cannot be null")
     private LocalTime  time =  LocalTime.now();
 
 }
 /*
     UserId
-	Name
 	UserName
-	Address
+	userType
+	DateOfBirth
+	Email
 	Phone Number
+	Date
+	Time
 	*/
