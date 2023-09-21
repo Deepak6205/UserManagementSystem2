@@ -31,6 +31,59 @@ This project, named "User Management," is a robust Spring Boot application desig
 - **Language:** Java
 - **Build Tool:** Maven
 
+## Data Validation in the User Class
+
+The `User` class in our User Management System model is equipped with comprehensive data validation to ensure the accuracy and consistency of user data. Here are the key points about the validations applied to the fields:
+
+### User ID
+
+- **Validation:** `@NotNull`
+- **Description:** The `userId` field is required and cannot be null.
+
+### User Name
+
+- **Validation:** `@NotBlank`, `@Pattern(regexp = "^[a-zA-Z ]+$")`
+- **Description:** The `userName` field must not be blank, and it must consist of alphabetic characters and spaces only.
+
+### User Type
+
+- **Validation:** None
+- **Description:** The `type` field is not subject to additional validation as it represents an enumeration of predefined user types.
+
+### Date of Birth
+
+- **Validation:** `@Pattern(regexp = "^\\d{4}-\\d{2}-\\d{2}$", message = "Date of birth must be in yyyy-mm-dd format")`
+- **Description:** The `dateOfBirth` field is validated to ensure it adheres to the "yyyy-mm-dd" format.
+
+### Email
+
+- **Validation:** `@Email(message = "Invalid email format. Please enter a valid Email!")`
+- **Description:** The `userEmail` field is validated to ensure it contains a valid email address.
+
+### Phone Number
+
+- **Validation:** `@Size(min = 12, max = 12)`, `@Pattern(regexp = "91[0-9]{10}$", message = "Enter a Valid Phone Number,Phone number must start with 91 and be followed by 10 digits")`
+- **Description:** The `userContactNo` field is validated to ensure it is exactly 12 characters long and starts with "91," followed by 10 digits.
+
+### Date
+
+- **Validation:** `@NotNull(message = "Date cannot be null")`, `@Past(message = "Date must be in the past")`
+- **Description:** The `date` field is validated to ensure it is not null and represents a date in the past.
+
+### Time
+
+- **Validation:** `@NotNull(message = "Time cannot be null")`
+- **Description:** The `time` field is validated to ensure it is not null.
+
+### Additional Data Validation
+
+- **Dynamic Default Values:** Both the `date` and `time` fields have dynamic default values. The `date` field is set to the current date, and the `time` field is set to the current time when a new `User` object is created.
+
+- **Custom Validation:** We have implemented custom validation annotations for `LocalDate` and `LocalTime` fields to enforce specific format and logic requirements. These custom annotations are used for more fine-grained validation.
+
+These validations ensure that user data is accurately captured and meets specified criteria, contributing to the reliability and integrity of our User Management System. Users can trust that their information is handled with care and precision.
+
+
 ## Data Flow
 
 ### Controller
